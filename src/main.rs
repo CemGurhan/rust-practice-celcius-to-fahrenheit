@@ -11,7 +11,7 @@ fn main() {
 
 
  
-     println!("Select 1 to convert from celcius to farenheight, or 2 for the inverse");
+     println!("Select 1 to convert from celcius to fahrenheit, or 2 for the inverse");
      
      io::stdin().read_line(&mut selected_number).expect("failed to read line!"); 
 
@@ -27,14 +27,14 @@ fn main() {
         
         let final_temp = converter(return_temp,selected_number); 
         
-        println!("Temperature in farenheight: {final_temp}");
+        println!("Temperature in fahrenheit: {final_temp}");
      } else if selected_number == 2{
         
-        println!("Enter temperature to convert (expected : farenheight)");
+        println!("Enter temperature to convert (expected : fahrenheit)");
         io::stdin().read_line(&mut return_temp).expect("failed to read line!");              
         let return_temp: f64 = return_temp.trim().parse().expect("please type a number!");
         let final_temp = converter(return_temp,selected_number); 
-        println!("Temperature in farenheight: {final_temp}");
+        println!("Temperature in fahrenheit: {final_temp}");
 
      }
 
